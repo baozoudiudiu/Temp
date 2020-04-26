@@ -1,0 +1,39 @@
+<!-- index.wxml -->
+<view class="container">
+
+	<view id="third" style="display:{{thirdDisplay}};" bindtouchstart="swiperStartMove" bindtouchend="swiperEndMove">
+		<view class="third-item swiper_first" data-item-id="0">
+			<image class="swiper_first_center" src="https://upload-images.jianshu.io/upload_images/3096223-b09f4eb998ab063e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			<view class="swiper_first_bottom">
+				<image style="width:108px;height:8.5px;" src="https://upload-images.jianshu.io/upload_images/3096223-715826e65838e7e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+				<image style="width:100px;height:6.5px;margin-top:10px;" src="/source/p@3x.png"></image>
+				<image style="width:25.5px;height:13.5px;margin-top:10px;" class="shake" src="https://upload-images.jianshu.io/upload_images/3096223-a351a363857cd718.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			</view>
+		</view>
+		<view class="third-item swiper_second" data-item-id="1">2</view>
+		<view class="third-item swiper_third" data-item-id="2">3</view>
+		<view class="third-item swiper_fourth" data-item-id="3">4</view>
+	</view>
+
+	<view id="second" style="display:{{secondDisplay}};" bindtap="homepageTap">
+		<image class="second_bg" src="https://upload-images.jianshu.io/upload_images/3096223-1b9774cb3f694f15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" model="center"></image>
+		<!-- 中间文字图 -->
+		<image class="second_logo" src="https://upload-images.jianshu.io/upload_images/3096223-7818df169e24fbff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="widthFix"></image>
+		<!-- 下方文字 -->
+		<image class="second_img" src="https://upload-images.jianshu.io/upload_images/3096223-988b63149b773d5c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="widthFix"></image>
+		<image class="second_bottom" src="/source/p@3x.png" mode="widthFix"> </image>
+	</view>
+
+	<view id="first" style="display:{{firstDisplay}};">
+		<!-- 背景图 -->
+		<image class="bg_image" src="https://upload-images.jianshu.io/upload_images/3096223-900e9e3cb24f0360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="scaleToFill"></image>
+		<!-- 中间文字图 -->
+		<view class="center_image_view">
+			<image class="center_image" src="/source/logo@3x.png" mode="widthFix"></image>
+		</view>
+		<!-- 底部文字图 -->
+		<view class="bottom_image">
+			<image style="width:100px;" src="/source/p@3x.png" mode="widthFix"></image>
+		</view>
+	</view>
+</view>

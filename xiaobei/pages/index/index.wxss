@@ -1,0 +1,165 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  padding: 0 0;
+  margin: 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#first {
+  position: absolute;
+  padding: 0 0;
+  margin: 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg_image {
+  width: 100%;
+  height: 100vh;
+}
+
+.center_image_view {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.center_image {
+  width: 150px;
+}
+
+.bottom_image {
+  position: absolute;
+  display: flex;
+  bottom: 36px;
+  width: 100%;
+  justify-content: center;
+}
+
+
+
+#second {
+  position: absolute;
+  padding: 0 0;
+  margin: 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.second_bg {
+  width: 100%;
+  height: 100%;
+}
+
+.second_logo {
+  display: block;
+  position: absolute;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-75px, -100px);
+}
+
+.second_img {
+  display: block;
+  position: absolute;
+  width: 100px;
+  left: 50%;
+  bottom: 150px;
+  transform: translate(-50px, 0);
+}
+
+.second_bottom {
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: auto;
+  left: 50%;
+  bottom: 36px;
+  transform: translate(-50px, 0);
+}
+
+
+#third {
+  position: absolute;
+  padding: 0 0;
+  margin: 0 0;
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.third-item {
+  width: 100%;
+  /* height: 100%; */
+  height: 100vh;
+}
+
+.swiper_first {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://upload-images.jianshu.io/upload_images/3096223-900e9e3cb24f0360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240);
+}
+
+.swiper_first_center {
+  width: 230px;
+  height: 88px;
+  opacity: 0;
+}
+
+.swiper_first_bottom {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  bottom: 36px;
+  width: 100%;
+  opacity: 0;
+}
+
+.swiper_second {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://upload-images.jianshu.io/upload_images/3096223-900e9e3cb24f0360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240);
+}
+
+.swiper_third {
+  background-color: yellow;
+}
+
+.swiper_fourth {
+  background-color: cyan;
+}
+
+@keyframes shakeAnimation {
+  50% {
+    transform: translateY(1.5px);
+  }
+  100% {
+    transform: translateY(3px)
+  }
+}
+
+.shake {
+  animation-name: shakeAnimation;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
