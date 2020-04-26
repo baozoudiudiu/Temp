@@ -10,6 +10,7 @@ Page({
     thirdDisplay: 'none', // pageScroll模块
     animating: false, // 是否处于动画中, 用于屏蔽交互
     current_swiper_index: 0,  // 当前展示的pageScroll的页面下标
+    pre_swiper_index: 0,  // 前一个展示的pageScroll的页面下标
     pageCount: 4, // pageScroll页面数量
     pageY: 0, // 记录屏幕滑动触发点
   },
@@ -101,10 +102,42 @@ Page({
       {translateY: -targetHeight}
     ],1500, function(){
       this.setData({
+        pre_swiper_index: currentIndex,
         current_swiper_index: currentIndex + sender,
         animating: false,
       });
+      this.swiperItemOrigin(this.data.pre_swiper_index);
+      // 开始执行swiper-item的动画
+      this.swiperItemAnimation(this.data.current_swiper_index);
     }.bind(this));
+  },
+
+  swiperItemOrigin: function(index) {
+    if (index == 1)
+    {
+      this.clearAnimation('.swiper_second_bgView', {translateY: true});
+      this.clearAnimation('.swiper_second_bgView_frontImg', {opacity: true});
+      this.clearAnimation('.swiper_second_titles', {translateY: true, opacity: true});
+    }
+  },
+
+  swiperItemAnimation: function(index) {
+    let during = 1000;
+    let that = this;
+    if (index == 1)
+    { 
+      this.setData({animating: true});
+      this.animate('.swiper_second_bgView', [
+        {translateY: 150},
+        {translateY: 0}
+      ], during);
+      this.animate('.swiper_second_bgView_frontImg', [
+        {opacity: 0.0},{opacity: 1.0}
+      ], during);
+      this.animate('.swiper_second_titles', [{translateY: 100, opacity: 0.0}, {translateY: 0, opacity: 1.0}], during, function(){
+        that.setData({animating: false});
+      }.bind(this));
+    }
   },
 
   // 上一个

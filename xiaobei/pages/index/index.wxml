@@ -10,7 +10,18 @@
 				<image style="width:25.5px;height:13.5px;margin-top:10px;" class="shake" src="https://upload-images.jianshu.io/upload_images/3096223-a351a363857cd718.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
 			</view>
 		</view>
-		<view class="third-item swiper_second" data-item-id="1">2</view>
+		<view class="third-item swiper_second" data-item-id="1">
+			<view class="swiper_second_bgView">
+				<image class="swiper_second_bgView_bgImg" src="https://upload-images.jianshu.io/upload_images/3096223-fb6c6787fc7d0fca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="aspectFill"></image>
+				<image class="swiper_second_bgView_frontImg" src="https://upload-images.jianshu.io/upload_images/3096223-ad310c44504c993c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			</view>
+			<image class="swiper_second_title1 " src="https://upload-images.jianshu.io/upload_images/3096223-a5da64f3cb7aa0c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			<view class="swiper_second_titles">
+				<image class="swiper_second_title2" src="https://upload-images.jianshu.io/upload_images/3096223-7f03725dc852b516.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+				<image class="swiper_second_title3" src="https://upload-images.jianshu.io/upload_images/3096223-c23ca6765899cda8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+				<image class="swiper_second_title4" src="https://upload-images.jianshu.io/upload_images/3096223-822e7fe6b49e5565.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			</view>
+		</view>
 		<view class="third-item swiper_third" data-item-id="2">3</view>
 		<view class="third-item swiper_fourth" data-item-id="3">4</view>
 	</view>

@@ -99,12 +99,14 @@ page {
   margin: 0 0;
   width: 100%;
   /* height: 100vh; */
+  background-image: url(https://upload-images.jianshu.io/upload_images/3096223-900e9e3cb24f0360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240);
 }
 
 .third-item {
   width: 100%;
   /* height: 100%; */
   height: 100vh;
+  overflow: hidden;
 }
 
 .swiper_first {
@@ -139,6 +141,60 @@ page {
   justify-content: center;
   background-image: url(https://upload-images.jianshu.io/upload_images/3096223-900e9e3cb24f0360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240);
 }
+.swiper_second_bgView {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80vh;
+  transform: translateY(150px);
+}
+.swiper_second_bgView_bgImg {
+  width: 100%;
+  height: 100%;
+}
+.swiper_second_bgView_frontImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.0;
+}
+.swiper_second_title1 {
+  position: absolute;
+  left: 50%;
+  top: 36px;
+  width: 260px;
+  height: 158px;  
+  transform: translateX(-130px);
+}
+.swiper_second_titles {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 280px;
+  bottom: 56px;
+  left: 0;
+  transform: translateY(100px);
+  opacity: 0.0;
+}
+.swiper_second_title2 {
+  width: 143px; 
+  height: 44px;
+}
+.swiper_second_title3 {
+  margin-bottom: 100px;
+  width: 258px; 
+  height: 54px;
+}
+.swiper_second_title4 {
+  width: 240px; 
+  height: 61px;
+}
+
 
 .swiper_third {
   background-color: yellow;
