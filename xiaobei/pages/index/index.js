@@ -119,6 +119,12 @@ Page({
       this.clearAnimation('.swiper_second_bgView_frontImg', {opacity: true});
       this.clearAnimation('.swiper_second_titles', {translateY: true, opacity: true});
     }
+    else if (index == 2)
+    {
+      this.clearAnimation('.swiper_third_bgView', {translateY: true});
+      this.clearAnimation('.swiper_third_bgView_frontImg', {opacity: true});
+      this.clearAnimation('.swiper_third_titles', {translateY: true, opacity: true});
+    }
   },
 
   swiperItemAnimation: function(index) {
@@ -135,6 +141,20 @@ Page({
         {opacity: 0.0},{opacity: 1.0}
       ], during);
       this.animate('.swiper_second_titles', [{translateY: 100, opacity: 0.0}, {translateY: 0, opacity: 1.0}], during, function(){
+        that.setData({animating: false});
+      }.bind(this));
+    }
+    else if (index == 2)
+    {
+      this.setData({animating: true});
+      this.animate('.swiper_third_bgView', [
+        {translateY: 150},
+        {translateY: 0}
+      ], during);
+      this.animate('.swiper_third_bgView_frontImg', [
+        {opacity: 0.0},{opacity: 1.0}
+      ], during);
+      this.animate('.swiper_third_titles', [{translateY: 100, opacity: 0.0}, {translateY: 0, opacity: 1.0}], during, function(){
         that.setData({animating: false});
       }.bind(this));
     }

@@ -1,7 +1,8 @@
 <!-- index.wxml -->
 <view class="container">
-
+	<!-- homePage -->
 	<view id="third" style="display:{{thirdDisplay}};" bindtouchstart="swiperStartMove" bindtouchend="swiperEndMove">
+		<!-- 第一页 -->
 		<view class="third-item swiper_first" data-item-id="0">
 			<image class="swiper_first_center" src="https://upload-images.jianshu.io/upload_images/3096223-b09f4eb998ab063e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
 			<view class="swiper_first_bottom">
@@ -10,22 +11,43 @@
 				<image style="width:25.5px;height:13.5px;margin-top:10px;" class="shake" src="https://upload-images.jianshu.io/upload_images/3096223-a351a363857cd718.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
 			</view>
 		</view>
+		<!-- 第二页 -->
 		<view class="third-item swiper_second" data-item-id="1">
-			<view class="swiper_second_bgView">
-				<image class="swiper_second_bgView_bgImg" src="https://upload-images.jianshu.io/upload_images/3096223-fb6c6787fc7d0fca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="aspectFill"></image>
-				<image class="swiper_second_bgView_frontImg" src="https://upload-images.jianshu.io/upload_images/3096223-ad310c44504c993c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			<!-- 背景图 -->
+			<view class="swiper_second_bgView swiper_item_bgView">
+				<image class="swiper_second_bgView_bgImg swiper_item_bgView_bgImg" src="https://upload-images.jianshu.io/upload_images/3096223-fb6c6787fc7d0fca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="aspectFill"></image>
+				<image class="swiper_second_bgView_frontImg swiper_item_bgView_frontImg" src="https://upload-images.jianshu.io/upload_images/3096223-ad310c44504c993c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
 			</view>
-			<image class="swiper_second_title1 " src="https://upload-images.jianshu.io/upload_images/3096223-a5da64f3cb7aa0c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
-			<view class="swiper_second_titles">
-				<image class="swiper_second_title2" src="https://upload-images.jianshu.io/upload_images/3096223-7f03725dc852b516.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
-				<image class="swiper_second_title3" src="https://upload-images.jianshu.io/upload_images/3096223-c23ca6765899cda8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
-				<image class="swiper_second_title4" src="https://upload-images.jianshu.io/upload_images/3096223-822e7fe6b49e5565.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			<!-- 顶部文字 -->
+			<image class="swiper_second_title1 swiper_item_title1" src="https://upload-images.jianshu.io/upload_images/3096223-a5da64f3cb7aa0c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			<!-- 下方三个文字 -->
+			<view class="swiper_second_titles swiper_item_titles">
+				<image class="swiper_second_title2 swiper_item_title2" src="https://upload-images.jianshu.io/upload_images/3096223-7f03725dc852b516.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+				<image class="swiper_second_title3 swiper_item_title3" src="https://upload-images.jianshu.io/upload_images/3096223-c23ca6765899cda8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+				<image class="swiper_second_title4 swiper_item_title4" src="https://upload-images.jianshu.io/upload_images/3096223-822e7fe6b49e5565.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
 			</view>
 		</view>
-		<view class="third-item swiper_third" data-item-id="2">3</view>
+		<!-- 第三页 -->
+		<view class="third-item swiper_third" data-item-id="2">
+			<!-- 背景图 -->
+			<view class="swiper_third_bgView swiper_item_bgView">
+				<image class="swiper_third_bgView_bgImg swiper_item_bgView_bgImg" src="https://upload-images.jianshu.io/upload_images/3096223-9977e88704ab24e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="aspectFill"></image>
+				<image class="swiper_third_bgView_frontImg swiper_item_bgView_frontImg" src="https://upload-images.jianshu.io/upload_images/3096223-ad310c44504c993c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			</view>
+			<!-- 顶部文字 -->
+			<image class="swiper_third_title1 swiper_item_title1" src="https://upload-images.jianshu.io/upload_images/3096223-43e471438095ccb7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			<!-- 下方三个文字 -->
+			<view class="swiper_third_titles swiper_item_titles">
+				<image class="swiper_third_title2 swiper_item_title2" src="https://upload-images.jianshu.io/upload_images/3096223-b5076f391bb38a4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+				<image class="swiper_third_title3 swiper_item_title3" src="https://upload-images.jianshu.io/upload_images/3096223-f7d0242b97e8fe48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+				<image class="swiper_third_title4 swiper_item_title4" src="https://upload-images.jianshu.io/upload_images/3096223-3a1d89c453947694.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
+			</view> 
+		</view>
+		<!-- 第四页 -->
 		<view class="third-item swiper_fourth" data-item-id="3">4</view>
 	</view>
 
+	<!-- 加载页二 -->
 	<view id="second" style="display:{{secondDisplay}};" bindtap="homepageTap">
 		<image class="second_bg" src="https://upload-images.jianshu.io/upload_images/3096223-1b9774cb3f694f15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" model="center"></image>
 		<!-- 中间文字图 -->
@@ -35,6 +57,7 @@
 		<image class="second_bottom" src="/source/p@3x.png" mode="widthFix"> </image>
 	</view>
 
+	<!-- 加载页一 -->
 	<view id="first" style="display:{{firstDisplay}};">
 		<!-- 背景图 -->
 		<image class="bg_image" src="https://upload-images.jianshu.io/upload_images/3096223-900e9e3cb24f0360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="scaleToFill"></image>

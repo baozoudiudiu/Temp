@@ -141,18 +141,18 @@ page {
   justify-content: center;
   background-image: url(https://upload-images.jianshu.io/upload_images/3096223-900e9e3cb24f0360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240);
 }
-.swiper_second_bgView {
+.swiper_item_bgView {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 80vh;
   transform: translateY(150px);
 }
-.swiper_second_bgView_bgImg {
+.swiper_item_bgView_bgImg {
   width: 100%;
   height: 100%;
 }
-.swiper_second_bgView_frontImg {
+.swiper_item_bgView_frontImg {
   position: absolute;
   left: 0;
   top: 0;
@@ -160,7 +160,7 @@ page {
   height: 100%;
   opacity: 0.0;
 }
-.swiper_second_title1 {
+.swiper_item_title1 {
   position: absolute;
   left: 50%;
   top: 36px;
@@ -168,37 +168,62 @@ page {
   height: 158px;  
   transform: translateX(-130px);
 }
-.swiper_second_titles {
+.swiper_item_titles {
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  top: 280px;
+  top: 250px;
   bottom: 56px;
   left: 0;
   transform: translateY(100px);
   opacity: 0.0;
 }
-.swiper_second_title2 {
+.swiper_item_title2 {
   width: 143px; 
   height: 44px;
 }
-.swiper_second_title3 {
+.swiper_item_title3 {
   margin-bottom: 100px;
   width: 258px; 
   height: 54px;
 }
-.swiper_second_title4 {
+.swiper_item_title4 {
   width: 240px; 
   height: 61px;
 }
 
 
 .swiper_third {
-  background-color: yellow;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://upload-images.jianshu.io/upload_images/3096223-900e9e3cb24f0360.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240);
 }
+.swiper_third_bgView_bgImg {
+  height: 120% !important;
+}
+.swiper_third_title1 {
+  transform: translateX(-157.5px);
+  width: 315px !important;
+  height: 157px !important;
+}
+.swiper_third_title2 {
+  width: 174.5px !important;
+  height: 44.5px !important;
+}
+.swiper_third_title3 {
+  width: 215px !important;
+  height: 53.5px !important;
+}
+.swiper_third_title4 {
+  width: 240px !important;
+  height: 81px !important;
+}
+
 
 .swiper_fourth {
   background-color: cyan;
