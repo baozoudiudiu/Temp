@@ -44,7 +44,21 @@
 			</view> 
 		</view>
 		<!-- 第四页 -->
-		<view class="third-item swiper_fourth" data-item-id="3">4</view>
+		<view class="third-item swiper_fourth" data-item-id="3">
+			<!-- 标题文字 -->
+			<view class="swiper_fourth_contanier">
+				<image style="width:137.5px;margin-top:68px;" src="https://upload-images.jianshu.io/upload_images/3096223-bedb24d116972949.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="widthFix"></image>
+				<image style="width:79px;margin-bottom:80px;" src="https://upload-images.jianshu.io/upload_images/3096223-7818df169e24fbff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="widthFix"></image>
+				<image style="width:99px;margin-bottom:36px;" src="/source/p@3x.png" mode="widthFix"></image>
+			</view>
+			<!-- 定位坐标 -->
+			<image class="location_icon shake" style="right:12rpx;bottom:{{edge}}rpx;" src="https://upload-images.jianshu.io/upload_images/3096223-65d6ccff39e6e976.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="heightFix"></image>
+			<image class="location_icon shake" style="right:209rpx;top:499rpx;" src="https://upload-images.jianshu.io/upload_images/3096223-d03130c510779657.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="heightFix"></image>
+			<image class="location_icon shake" style="left:259rpx;top:383.5rpx;" src="https://upload-images.jianshu.io/upload_images/3096223-0a865be5362343f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="heightFix"></image>
+			<image class="location_icon shake" style="left:140rpx;top:509rpx;" src="https://upload-images.jianshu.io/upload_images/3096223-ca248c141f4daf10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="heightFix"></image>
+			<image class="location_icon shake" style="left:246rpx;top:{{yipinTop}}rpx;" src="https://upload-images.jianshu.io/upload_images/3096223-b5a079919e95259b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="heightFix"></image>
+			<image class="location_icon shake" style="left:50%;top:{{houfuTop}}rpx;margin-left:-25.5rpx" src="https://upload-images.jianshu.io/upload_images/3096223-3673ddb597d646ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="heightFix"></image>
+		</view>
 	</view>
 
 	<!-- 加载页二 -->
@@ -69,5 +83,10 @@
 		<view class="bottom_image">
 			<image style="width:100px;" src="/source/p@3x.png" mode="widthFix"></image>
 		</view>
+	</view>
+
+	<!-- 左上角icon -->
+	<view id="left_top_icon" bindtap="iconClick" style="display:{{left_top_icon_display}};">
+		<image style="width: 100%; height: 100%;" src="https://upload-images.jianshu.io/upload_images/3096223-52eee3266d766f52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
 	</view>
 </view>

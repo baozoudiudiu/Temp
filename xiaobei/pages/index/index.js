@@ -8,14 +8,27 @@ Page({
     firstDisplay: 'block',  // 加载页一
     secondDisplay: 'none', // 加载页二
     thirdDisplay: 'none', // pageScroll模块
+    left_top_icon_display: 'none',
     animating: false, // 是否处于动画中, 用于屏蔽交互
     current_swiper_index: 0,  // 当前展示的pageScroll的页面下标
     pre_swiper_index: 0,  // 前一个展示的pageScroll的页面下标
     pageCount: 4, // pageScroll页面数量
     pageY: 0, // 记录屏幕滑动触发点
+    edge: 589,  // 杭州壹号院的便宜
+    yipinTop: 739,  // 一品的上部偏移
+    houfuTop: 806,  // 候潮府的上部偏移
   },
   
   onLoad: function() {
+    let screenHeight = wx.getSystemInfoSync().windowHeight;
+    if (screenHeight <= 672) {
+      this.setData({edge: 509});
+    }else {
+      this.setData({
+        yipinTop: 739 + 100,
+        houfuTop: 806 + 100,
+      });
+    }
     let that = this;
     // 1.展示第一个加载页
     this.setData({animating: true,})
@@ -106,6 +119,10 @@ Page({
         current_swiper_index: currentIndex + sender,
         animating: false,
       });
+      if (this.data.left_top_icon_display == 'none')
+      {
+        this.setData({left_top_icon_display: 'block'});
+      }
       this.swiperItemOrigin(this.data.pre_swiper_index);
       // 开始执行swiper-item的动画
       this.swiperItemAnimation(this.data.current_swiper_index);
@@ -193,5 +210,10 @@ Page({
       this.pageUp();
       this.setData({pageY: 0})
     }
-  }
+  },
+
+  // 左上角头像点击
+  iconClick: function() {
+    console.log("左上角头像被点击啦!!!");
+  },
 })
