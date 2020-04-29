@@ -1,7 +1,7 @@
 <!-- index.wxml -->
 <view class="container">
 	<!-- homePage -->
-	<view id="third" style="display:{{thirdDisplay}};" bindtouchstart="swiperStartMove" bindtouchend="swiperEndMove">
+	<view id="third" style="display:{{thirdDisplay}};" bindtap="swiperClick" bindtouchstart="swiperStartMove" bindtouchend="swiperEndMove">
 		<!-- 第一页 -->
 		<view class="third-item swiper_first" data-item-id="0">
 			<image class="swiper_first_center" src="https://upload-images.jianshu.io/upload_images/3096223-b09f4eb998ab063e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
@@ -89,4 +89,17 @@
 	<view id="left_top_icon" bindtap="iconClick" style="display:{{left_top_icon_display}};">
 		<image style="width: 100%; height: 100%;" src="https://upload-images.jianshu.io/upload_images/3096223-52eee3266d766f52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></image>
 	</view>
+
+	<!-- 左下角menu -->
+	<view id="left_bottom_icon" bindtap="menuClick" style="opacity:{{left_bottom_icon_opacity}};">
+		<image class="scale_change" src="https://upload-images.jianshu.io/upload_images/3096223-b5f759788be5f5d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" mode="widthFix" style="width:44rpx;"></image>
+		<label>MENU</label>
+	</view>
+
+	<!-- 顶部菜单栏 -->
+	<view id="top_menu">
+	</view>
+
+	<!-- 底部菜单栏 -->
+	<view id="bottom_menu"></view>
 </view>

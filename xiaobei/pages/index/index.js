@@ -17,6 +17,8 @@ Page({
     edge: 589,  // 杭州壹号院的便宜
     yipinTop: 739,  // 一品的上部偏移
     houfuTop: 806,  // 候潮府的上部偏移
+    left_bottom_icon_opacity: 0.0, //屏幕左下角按钮透明度
+    showTopMenu: false,
   },
   
   onLoad: function() {
@@ -121,7 +123,12 @@ Page({
       });
       if (this.data.left_top_icon_display == 'none')
       {
-        this.setData({left_top_icon_display: 'block'});
+        this.setData({
+          left_top_icon_display: 'block',
+          left_bottom_icon_opacity: 1.0,
+        });
+        this.showTopMenu();
+        this.showBottomMenu();
       }
       this.swiperItemOrigin(this.data.pre_swiper_index);
       // 开始执行swiper-item的动画
@@ -212,8 +219,71 @@ Page({
     }
   },
 
+  swiperClick: function() {
+    if (this.data.animating) {return;}
+    if (this.data.current_swiper_index == 0) {return;}
+    if (this.data.showTopMenu == false) {return;}
+    this.dismissTopMenu();
+  },
+
   // 左上角头像点击
   iconClick: function() {
-    console.log("左上角头像被点击啦!!!");
+    this.showTopMenu();
   },
+
+  // 左下角按钮点击
+  menuClick: function() {
+    console.log("左下角menu按钮被点击啦!!!");
+    
+  },
+
+  // 展示顶部的菜单栏
+  showTopMenu: function() {
+    if (this.data.showTopMenu){return;}
+    this.setData({animating: true});
+    this.animate("#top_menu",[
+      {translateY: 0},
+      {translateY: 45},
+    ], 500, function(){
+      this.setData({
+        animating: false,
+        showTopMenu: true,
+      });
+    }.bind(this));
+  },
+
+  // 隐藏顶部的菜单
+  dismissTopMenu: function() {
+    if (this.data.showTopMenu == false) {return;}
+    this.setData({animating: true});
+    this.animate("#top_menu",[
+      {translateY: 40},
+      {translateY: 0},
+    ], 500, function(){
+      this.setData({
+        animating: false,
+        showTopMenu: false,
+      });
+    }.bind(this));
+  },
+
+  // 展示底部菜单
+  showBottomMenu: function() {
+    this.animate("#bottom_menu", [
+      {translateY: 0},
+      {translateY: -125},
+    ], 500, function(){
+
+    }.bind(this));
+  },
+
+  // 隐藏底部菜单
+  dismissBottomMenu: function() {
+    this.animate("#bottom_menu", [
+      {translateY: -125},
+      {translateY: 0},
+    ], 500, function(){
+
+    }.bind(this));
+  }
 })

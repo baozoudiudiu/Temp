@@ -253,10 +253,25 @@ page {
     transform: translateY(3px)
   }
 }
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+  }
+}
 
 .shake {
   animation-name: shakeAnimation;
   animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.scale_change {
+  animation-name: scaleAnimation;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -269,4 +284,37 @@ page {
   left: 74rpx;
   top: 33rpx;
   display: none;
+}
+#left_bottom_icon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 60rpx;
+  bottom: 80rpx;
+  width: 80rpx;
+}
+#left_bottom_icon label {
+  margin-top: 4rpx;
+  font-size: 18rpx;
+  color: white;
+}
+
+#top_menu {
+  position: absolute;
+  left: 0;
+  top: -90rpx;
+  width: 100%;
+  height: 90rpx;
+  background: url(https://upload-images.jianshu.io/upload_images/3096223-06cc826222a68436.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240);
+}
+
+#bottom_menu {
+  position: absolute;
+  left: 0;
+  bottom: -250rpx;
+  width: 100%;
+  height: 250rpx;
+  background: url(https://upload-images.jianshu.io/upload_images/3096223-3be0caf63405043c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240);
 }
